@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #4d549e;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        form {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+            color: #333;
+        }
+
+        form h2 {
+            margin-bottom: 20px;
+            color: #4d549e;
+            font-size: 22px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #4d549e;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        input[type="text"]::placeholder {
+            color: #aaa;
+        }
+
+        input[type="submit"] {
+            background-color: #4d549e;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3a417a;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        p span {
+            color: #4d549e;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <h2>Upload Your Image</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+
+        <label for="anyfile">Select Image to Upload:</label>
+        <input type="file" name="anyfile" id="anyfile">
+
+        <input type="submit" value="Upload Image" name="submit">
+
+        <p>Supported formats: <span>JPEG, PNG, GIF</span></p>
+    </form>
+</body>
+</html>
